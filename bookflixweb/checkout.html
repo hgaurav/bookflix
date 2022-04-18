@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.store.js"></script>
+</head>
+
+<body id="checkout-page" style="background: url(./images/bg2.jpg); background-attachment: fixed;">
+
+<div id="site">
+	<div id="content">
+		<h1 style="color: aquamarine;">Checkout</h1>
+			<table id="checkout-cart" class="shopping-cart">
+			  <thead>
+				<tr>
+					<th scope="col">Item</th>
+					<th scope="col">Qty</th>
+					<th scope="col">Price</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  
+			  </tbody>
+			</table>
+		 <div id="pricing">
+			
+			<p id="shipping" style="color: white;">
+				<strong >Shipping :-</strong><span id="sshipping"></span>
+			</p>
+			
+			<p id="sub-total" style="color: white; margin-left: -50px;">
+				<strong>Total</strong>: <span id="stotal"></span>
+			</p>
+		 </div>
+		 
+		 <form action="order.html" method="post" id="checkout-order-form">
+		 	<h2 style="color: aquamarine;">Your Details</h2>
+		 	
+		 	<fieldset id="fieldset-billing">
+		 		<legend>Billing</legend>
+		 		<div>
+		 			<label for="name" style="color:white;">Name</label>
+		 			<input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="email"  style="color:white;">Email</label>
+		 			<input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="city"  style="color:white;">City</label>
+		 			<input type="text" name="city" id="city" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="address"  style="color:white;">Address</label>
+		 			<input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="zip"  style="color:white;">ZIP Code</label>
+		 			<input type="text" name="zip" id="zip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="country"  style="color:white;">Country</label>
+		 			<select name="country" id="country" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Select</option>
+		 				<option value="De">Denmark</option>
+		 				<option value="IN">India</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+		 	
+		 	<div id="shipping-same "  style="color:aquamarine;">Same as Billing <input type="checkbox" id="same-as-billing" value=""/></div>
+		 	
+		 	<fieldset id="fieldset-shipping">
+		 		
+		 		<legend>Shipping</legend>
+		 		
+		 		<div>
+		 			<label for="sname"  style="color:white;">Name</label>
+		 			<input type="text" name="sname" id="sname" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="semail"  style="color:white;">Email</label>
+		 			<input type="text" name="semail" id="semail" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="scity"  style="color:white;">City</label>
+		 			<input type="text" name="scity" id="scity" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="saddress"  style="color:white;">Address</label>
+		 			<input type="text" name="saddress" id="saddress" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="szip"  style="color:white;">ZIP Code</label>
+		 			<input type="text" name="szip" id="szip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="scountry"  style="color:white;">Country</label>
+		 			<select name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Select</option>
+		 				<option value="De">Denmark</option>
+		 				<option value="IN">India</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+		 	
+		 	<p><input type="submit" id="submit-order" value="Submit" class="btn" /></p>
+			 
+		 
+		 </form>
+	</div>
+	
+	
+
+</div>
+
+
+</body>
+</html>	
+
+    
